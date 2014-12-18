@@ -1,0 +1,42 @@
+<template name="postItem">
+
+  <div class="solution">
+      <div class="solution-main">
+          <a href="{{pathFor 'postPage'}}"><h3>{{title}}</h3></a>
+          <p>{{solution}}</p>
+          <p class="meta">Propuesta por <a href="#">{{authorName}}</a> el {{date}}</p>
+          <p>{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}</p>
+
+      </div>
+
+      <div class="solution-secundary">
+          <div class="profile-picture" style="background-image:url('{{authorPicture}}')"></div>
+          <!--<img src="{{authorPicture}}" class="category">-->
+          <p><a href="#"  class="upvote {{upvotedClass}}"><i class="fa fa-thumbs-o-up  {{upvotedClass}}"></i></a> <span class="like">{{votes}}</span> 
+             <a href="#"  class="downvote {{upvotedClass}}"><i class="fa fa-thumbs-o-down"></i></a> <span class="dislike">{{downvotes}}</span></p>
+      </div>
+  </div>
+
+<!--
+  <div class="post">
+
+    <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
+
+    <div class="post-content">
+      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+
+      <p>
+        {{pluralize votes "Vote"}},
+
+        submitted by {{author}},
+
+        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+
+    </div>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn">Discuss</a>
+  </div>
+-->
+</template>

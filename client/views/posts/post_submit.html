@@ -1,0 +1,86 @@
+<template name="postSubmit">
+    <main>
+  <section id="add-solution" class="column-3">
+
+      <h2>Proponé una solución</h2>
+
+      <script charset="utf-8">
+
+      </script>
+
+      <form method="get">
+          
+          <label for="user-title">Título:</label>
+          
+          <input type="text" id="user-title" name="title" placeholder="Título de tu solución" autofocus required />
+          
+          <label for="user-title">Explicá cuál es el problema que identificaste:</label>
+          
+          <textarea id="user-problem" name="problem" placeholder="Explicá brevemente cuál es el problema que has identificado" required></textarea>
+          
+          <label for="user-title">Explicá cuál es la solución que proponés:</label>
+          
+          <textarea id="user-solution" name="solution" placeholder="Explicá brevemente cuál es la solución que te gustaría proponer" required></textarea>
+          
+          <label for="user-title">Explicá brevemente, paso a paso, cómo ejecutarías tu idea:</label>
+          
+          <div id="stepsHolder">
+              <input type="text" class="paso" name="step1" placeholder="Paso a seguir"/>
+          </div>
+          
+          <input type="hidden" name="stepsCount" id="stepsCount" value="1"/>
+          
+          <a href="#" id="addMore">Agrega Pasos +</a>
+          
+          <input type="submit" value="Enviar propuesta" class="btn-action-blue"/>
+          
+          
+          <!--
+          
+
+        <div class="control-group">
+            <label class="control-label" for="url">URL</label>
+            <div class="controls">
+                <input name="url" type="text" value="" placeholder="Your URL"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="title">Title</label>
+            <div class="controls">
+                <input name="title" type="text" value="" placeholder="Name your post"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="message">Message</label>
+            <div class="controls">
+                <textarea name="message" type="text" value="" placeholder="Message from your post"></textarea>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" value="Submit" class="btn btn-primary"/>
+            </div>
+        </div>
+            
+-->
+          
+          
+          
+      </form>
+
+  </section>
+  <section id="tips" class="column-1">
+
+      <p>Gracias por tomarte el tiempo para llenar este formulario, al compartir tu solución estás ayudando a que otras personas se puedan unir y contribuir en la resolución de este problema.</p>
+
+      <p>De ahora en adelante serás el encargado de supervisar el proceso.</p>
+
+  </section>
+    </main>
+    
+    <div class="view-more"></div>
+    
+</template>

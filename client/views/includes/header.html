@@ -1,0 +1,45 @@
+<template name="header">
+
+  <header >
+
+    <!--<h1>Solucion<span>.</span>es</h1>-->
+    <a href="/"><img src="/img/logo-soluciones.png" /></a>
+      
+    <nav>
+      <ul class="nav pull-right">
+        <li >{{> loginButtons}}</li>
+      {{#if currentUser}}
+        <li >{{> notificationsCountPanel}} </li>
+      {{else}}
+            <!--
+          <li>
+                <div id="login-buttons">
+                    <div class="login-text-and-button">
+                        <div class="login-button single-login-button" id="login-buttons-facebook">
+                            <div class="login-image" id="login-buttons-image-facebook"></div>
+                            <span class="text-besides-image sign-in-text-facebook">Ingresá con Facebook</span>
+                        </div>
+
+                    </div>
+                </div>
+        </li> 
+            -->
+          <!--
+        <li class="loggin"><a href="#">Ingresá</a></li>
+        <li>/</li>
+        <li><a href="#">Registrate</a></li>
+        -->
+      {{/if}}
+      </ul>
+    </nav>
+
+    {{#if currentUser}}
+      {{> notifications}} 
+    {{else}}
+        <!-- {{> loggin}} -->
+    {{/if}}
+
+  </header>
+
+
+</template>

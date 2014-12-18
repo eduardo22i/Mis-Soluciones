@@ -1,0 +1,57 @@
+<template name="postDetailItem">
+    
+    <main>
+        
+        <section id="solution-single" class="column-3">
+            
+            <h2>Solución</h2>
+            
+                <dl>
+                    <dt>Título:</dt>
+                    <dd>{{title}}</dd>
+
+                    <dt>El problema:</dt>
+                    <dd>{{problem}}</dd>
+                    
+                    <dt>La solución:</dt>
+                    <dd>{{solution}}</dd>
+
+                    <dt>Qué se necesita para ejecutar esta idea:</dt>
+                    <dd>
+                        
+                        <ul>
+                            {{#each steps}}
+                            <li>no{{label}}</li>
+                            {{/each}}
+                            
+                        
+                        </ul>
+                    </dd>
+                </dl>
+
+        </section>
+
+        <section id="solution-actions" class="column-1">
+            
+            <h5>Propuesto por:</h5>
+
+            <div class="profile">
+                <div class="profile-picture" style="background-image:url('{{authorPicture}}')"></div>
+                <!--<img src="{{authorPicture}}" class="profile-picture">-->
+                <h6>{{authorName}}</h6>
+                <p><a href="#">juan.perez@gmail.com</a></p>
+                <!--<p>San Pedro Sula, Honduras</p>-->
+                <p>{{date}}</p>
+                
+            </div>
+            
+            <button class="vote-up"><i class="fa fa-thumbs-o-up"></i></button> <span class="count-votes {{upvotedClass}}">{{votes}}</span>
+            <button class="vote-down"><i class="fa fa-thumbs-o-down"></i></button> <span class="count-votes">0</span>
+        </section>
+        
+    </main>
+    
+    <div class="view-more"></div>
+
+    
+</template>

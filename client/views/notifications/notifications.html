@@ -1,0 +1,44 @@
+
+<template name="notificationsCountPanel">
+    
+    <a href="#" id="notificationCountAndName">
+
+        {{currentUser.username}}
+        {{#if notificationCount}}
+        <span class="counter"> 
+            {{notificationCount}}
+            
+        </span>
+        {{/if}}
+        
+    </a>
+    
+</template>
+
+<template name="notifications">
+    
+    <div class="modal-window mod" id="notificationWindow">
+        <h6>Notificaciones</h6>
+        <ul id="notifications">
+            {{#if notificationCount}}
+            {{#each notifications}}
+                {{> notification}}
+            {{/each}}
+            <li><a href="#">Ver todas</a></li>
+            {{else}}
+            <li><span>No Notifications</span></li>
+            {{/if}}
+        </ul>
+       
+    </div>
+    
+</template>
+
+<template name="notification">
+  <li>
+    <a href="{{notificationPostPath}}">
+        <strong>{{authorName}}</strong> commented on your post<br />
+        <small><i class="fa fa-check"></i> Hace 2 horas</small>
+    </a>
+  </li>
+</template>

@@ -1,0 +1,28 @@
+<template name="layout">
+
+	<div class="container">
+		
+         
+        
+        <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+        
+		{{> header}}
+		{{> errors}}
+
+		<div id="main" class="row-fluid">
+			{{> yield}}
+		</div>
+
+
+		<footer>
+			<p>Contenido libre y gratuito, <a href="#">contactanos</a> si tenés alguna duda.</p>
+		</footer>
+
+	</div>
+
+</template>
